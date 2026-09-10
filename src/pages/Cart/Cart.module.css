@@ -1,0 +1,54 @@
+.cartPage {
+  padding: 1rem;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.totalRow {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(150px, 20%) 3fr 1fr;
+}
+
+.total {
+  text-align: right;
+  grid-column: 2;
+}
+
+.totalValue {
+  grid-column: 3;
+}
+
+.cartPage hr {
+  background-color: var(--dark-accent);
+  width: 95%;
+  height: 2px;
+  border: none;
+  opacity: 0.5;
+}
+
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 2rem;
+}
+
+.checkout button {
+  padding: 1rem 3rem;
+  font-size: x-large;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--dark-accent);
+  color: white;
+  transition: background-color 150ms;
+  cursor: pointer;
+}
+
+.checkout button:hover {
+  background-color: var(--dark-accent-hover);
+}

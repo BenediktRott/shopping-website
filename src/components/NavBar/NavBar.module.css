@@ -11,12 +11,51 @@
 
 .navBar h1 {
   margin: 0;
-  margin-right: auto;
   font-size: 2.5rem;
+}
+
+.logo {
+  margin: 0;
+  margin-right: auto;
 }
 
 .link {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+}
+
+.cartCount {
+  padding: 0;
+  margin: 0;
+  min-width: 2rem;
+  height: 2rem;
+  box-sizing: border-box;
+  /* Make appear centered */
+  padding-right: 4px;
+  padding-bottom: 1px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 9999px;
+  background-color: red;
+  color: white;
+
+  line-height: 1;
+  font-size: larger;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+  transition: transform 200ms;
+}
+
+.animation {
+  transform: scale(1.2);
 }

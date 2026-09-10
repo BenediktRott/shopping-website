@@ -2,24 +2,10 @@ import { useEffect, useState } from "react";
 import { HorizontalPager } from "../../components/HorizontalPager/HorizontalPager";
 import { ShopItem } from "../../components/ShopItem/ShopItem";
 import styles from "./Home.module.css";
+import { useShopData } from "../../utils/ShopDataProvider";
 
 export function Home() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Server Error");
-        }
-        return response.json();
-      })
-      .then((data) => setData(data))
-      .catch((error) => setError(error))
-      .finally(() => setLoading(false));
-  }, []);
+  const { data, loading, error } = useShopData();
 
   let pager;
 

@@ -1,0 +1,15 @@
+.cartItem {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(150px, 20%) 3fr 1fr;
+}
+
+.cartItem img {
+  width: max(150px, 20%);
+  margin: auto;
+}
+
+.cartItem label {
+  font-size: larger;
+  margin-right: 1rem;
+}

@@ -17,10 +17,23 @@
   flex: 1 1 auto;
 }
 
-.buttons {
+.bottomRow {
+  flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.itemCard span {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: large;
+}
+
+.cartContainer {
+  display: flex;
   gap: 0.5rem;
 }
 
@@ -54,6 +67,7 @@
 
 .addToCart {
   padding: 0.5rem 1rem;
+  text-wrap: nowrap;
 }
 
 input {

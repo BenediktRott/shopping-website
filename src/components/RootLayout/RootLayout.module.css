@@ -1,0 +1,24 @@
+:global(html, body) {
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100dvh;
+  border-left: 1px solid var(--alabaster-grey-2);
+  border-right: 1px solid var(--alabaster-grey-2);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.root main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid var(--alabaster-grey-2);
+}

@@ -1,0 +1,65 @@
+.pagerContainer {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.track {
+  --item-size: min(80%, 400px);
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 0rem;
+
+  padding-inline: calc(50% - (var(--item-size) / 2));
+  box-sizing: border-box;
+
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 var(--item-size);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: white;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.slide.inactive {
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  aspect-ratio: 1;
+  width: 7px;
+  border-radius: 9999px;
+  border: none;
+  background-color: var(--alabaster-grey-2);
+  padding: 0px;
+}
+
+.pagination button:hover,
+.activeDot {
+  background-color: var(--dark-accent);
+}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("./assets/fonts/Caveat-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400; /* Adjust weight as needed */
+  font-style: normal;
+  font-display: swap; /* Improves loading performance */
+}
+
+body {
+  font-family: Caveat, serif;
+}
+
+:root {
+  --powder-blush: #fec5bbff;
+  --almond-silk: #fcd5ceff;
+  --soft-blush: #fae1ddff;
+  --seashell: #f8edebff;
+  --alabaster-grey: #e8e8e4ff;
+  --alabaster-grey-2: #d8e2dcff;
+  --dark-accent: #264653;
+  --dark-accent-hover: #111e23;
+  --linen: #ece4dbff;
+  --powder-petal: #ffe5d9ff;
+  --peach-fuzz: #ffd7baff;
+  --peach-glow: #fec89aff;
+  --color-bg-primary: white;
+}

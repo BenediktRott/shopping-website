@@ -1,0 +1,87 @@
+.banner {
+  width: 100%;
+  background-color: var(--seashell);
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.banner h1 {
+  flex: 0 1 auto;
+  min-width: min(40%, 300px);
+  font-size: 3rem;
+}
+
+.banner > :global(*) {
+  flex: 1;
+  min-width: 0; /* CRITICAL: Allows flex child to shrink below its content width */
+}
+
+.categories h1 {
+  text-align: center;
+}
+
+.gridContainer {
+  padding: 1rem;
+  display: grid;
+  grid-template-areas: "men women" "explore explore";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+}
+
+.men {
+  grid-area: men;
+}
+
+.women {
+  grid-area: women;
+}
+
+.explore {
+  grid-area: explore;
+}
+
+.gridContainer button {
+  height: 200px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  filter: brightness(0.75);
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  transition:
+    transform 250ms,
+    filter 250ms;
+}
+
+button:hover .imageWrapper img {
+  filter: brightness(0.4);
+  transform: scale(1.1);
+}
+
+.gridContainer button h1 {
+  margin: 0;
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  color: white;
+  font-size: clamp(2.5rem, 4vw, 3rem);
+}

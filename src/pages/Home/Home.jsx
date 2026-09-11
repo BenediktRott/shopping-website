@@ -3,6 +3,9 @@ import { HorizontalPager } from "../../components/HorizontalPager/HorizontalPage
 import { ShopItem } from "../../components/ShopItem/ShopItem";
 import styles from "./Home.module.css";
 import { useShopData } from "../../utils/ShopDataProvider";
+import imgMan from "@/assets/img/man.jpg";
+import imgWoman from "@/assets/img/woman.jpg";
+import imgExplore from "@/assets/img/explore.jpg";
 
 export function Home() {
   const { data, loading, error } = useShopData();
@@ -35,19 +38,19 @@ export function Home() {
         <div className={styles.gridContainer}>
           <button className={styles.men}>
             <div className={styles.imageWrapper}>
-              <img src="src/assets/img/man.jpg" alt="Man" />
+              <img src={imgMan} alt="Man" />
             </div>
             <h1>Men</h1>
           </button>
           <button className={styles.women}>
             <div className={styles.imageWrapper}>
-              <img src="src/assets/img/woman.jpg" alt="Woman" />
+              <img src={imgWoman} alt="Woman" />
             </div>
             <h1>Women</h1>
           </button>
           <button className={styles.explore}>
             <div className={styles.imageWrapper}>
-              <img src="src/assets/img/explore.jpg" alt="Mountains" />
+              <img src={imgExplore} alt="Mountains" />
             </div>
             <h1>Explore</h1>
           </button>

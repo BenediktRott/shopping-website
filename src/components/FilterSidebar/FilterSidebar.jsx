@@ -11,11 +11,11 @@ export function FilterSidebar({
   };
 
   return (
-    <section className={styles.sidebar}>
+    <details className={styles.categoryDropdown}>
+      <summary className={styles.categoryHeader}>Category</summary>
+
       <form>
         <fieldset>
-          <legend>Category</legend>
-
           {categories.map((category) => (
             <div key={category} className={styles.checkbox}>
               <input
@@ -32,7 +32,7 @@ export function FilterSidebar({
           ))}
         </fieldset>
       </form>
-    </section>
+    </details>
   );
 }
 

@@ -1,11 +1,11 @@
 .cartItem {
   display: grid;
   gap: 2rem;
-  grid-template-columns: minmax(150px, 20%) 3fr 1fr;
+  grid-template-columns: minmax(100px, 15%) 3fr 1fr;
 }
 
 .cartItem img {
-  width: max(150px, 20%);
+  width: 100%;
   margin: auto;
 }
 

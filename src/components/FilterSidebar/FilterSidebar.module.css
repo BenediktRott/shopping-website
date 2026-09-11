@@ -5,18 +5,36 @@
   justify-content: start;
 }
 
-.sidebar fieldset {
+.categoryDropdown fieldset {
   border: 1px solid var(--dark-accent);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.sidebar legend {
+.categoryHeader {
+  cursor: pointer;
   font-size: xx-large;
   padding: 0 10px;
 }
 
 input[type="checkbox"] {
   accent-color: var(--dark-accent);
+}
+
+@media screen and (min-width: 900px) {
+  .categoryHeader {
+    cursor: default;
+    pointer-events: none;
+    list-style: none;
+  }
+
+  ::details-content {
+    content-visibility: visible;
+  }
+
+  .categoryHeader::marker,
+  .categoryHeader::-webkit-details-marker {
+    display: none;
+  }
 }

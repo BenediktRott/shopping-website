@@ -15,6 +15,12 @@
   font-size: 3rem;
 }
 
+@media screen and (max-width: 600px) {
+  .banner h1 {
+    display: none;
+  }
+}
+
 .banner > :global(*) {
   flex: 1;
   min-width: 0; /* CRITICAL: Allows flex child to shrink below its content width */
